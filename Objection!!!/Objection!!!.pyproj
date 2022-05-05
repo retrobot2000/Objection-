@@ -24,6 +24,7 @@
     <Compile Include="Objection___.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Empty.png" />
     <Content Include="miles-edgeworth.png" />
     <Content Include="objection.png" />
     <Content Include="phoenix-wright.png" />
