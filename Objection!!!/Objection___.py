@@ -10,47 +10,65 @@ from tkinter import PhotoImage
 # Game win after 10 successful counters
 
 ###########
-# Tkinter #
+# Windows #
 ###########
+def wel_win():
+	""" Create welcome window """
+	global win
+	window.destroy()
+	welcome = tk.Tk()
+	# Set title
+	welcome.title("Ace Attorney: Menu")
+	# Set window size
+	welcome.geometry("300x300")
 
-# Create welcome window
-welcome = tk.Tk()
-# Set title
-welcome.title("Ace Attorney: Menu")
-# Set window size
-welcome.geometry("300x300")
+def set_win():
+	""" Create settings window """
+	global win
+	window.destroy()
+	settings = tk.Tk()
+	# Set title
+	settings.title("Ace Attorney: Settings")
+	# Set window size
+	settings.geometry("300x300")
 
-# Create main game window
-win = tk.Tk()
-# Set title
-win.title("Ace Attorney")
-# Set window size
-win.geometry("1600x300")
+def gme_win():
+	""" Create Game window """
+	global win
+	window.destroy()
+	game = tk.Tk()
+	# Set title
+	game.title("Ace Attorney: Menu")
+	# Set window size
+	game.geometry("900x300")
+
+
+	# Columns for Phoenix
+	buttonname = tk.Button(image= PW)
+	buttonname.grid(row=0,column=1)
+
+	# Objection Columns
+	buttonname = tk.Button(image= E)
+	buttonname.grid(row=0,column=2)
+	# Swap for column 2
+	buttonname = tk.Button(image= E)
+	buttonname.grid(row=0,column=3)
+	# Swap for column 3
+
+
+	# Edgeworth Columns
+	buttonname = tk.Button(image= E)
+	buttonname.grid(row=0,column=4)
 
 ##########
 # Images #
 ##########
-PW = PhotoImage(file="phoenix-wright.png")
-ME = PhotoImage(file="miles-edgeworth.png")
-OBJ = PhotoImage(file="objection.png")
-E = PhotoImage(file="Empty.png")
-
-# Columns for Phoenix
-buttonname = tk.Button(image= PW)
-buttonname.grid(row=0,column=1)
-
-# Objection Columns
-buttonname = tk.Button(image= E)
-buttonname.grid(row=0,column=2)
-# Swap for column 2
-buttonname = tk.Button(image= E)
-buttonname.grid(row=0,column=3)
-# Swap for column 3
-
-
-# Edgeworth Columns
-buttonname = tk.Button(image= E)
-buttonname.grid(row=0,column=4)
+def load_images():
+	""" Loads all images because it can """
+	PW = PhotoImage(file="phoenix-wright.png")
+	ME = PhotoImage(file="miles-edgeworth.png")
+	OBJ = PhotoImage(file="objection.png")
+	E = PhotoImage(file="Empty.png")
 
 ##############
 # Win Screen #
