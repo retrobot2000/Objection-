@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Empty.png" />
+    <Content Include="Logo.png" />
     <Content Include="miles-edgeworth.png" />
     <Content Include="objection.png" />
     <Content Include="phoenix-wright.png" />
