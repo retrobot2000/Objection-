@@ -12,6 +12,9 @@ from tkinter import PhotoImage
 ##########
 # Images #
 ##########
+
+
+
 def load_images():
 	""" Loads all images because it can """
 	global PW
@@ -36,14 +39,18 @@ def wel_win():
 	# Set title
 	window.title("Ace Attorney: Menu")
 	# Set window size
-	window.geometry("1600x600")
+	window.geometry("1600x700")
 
 	# Load images for intro graphic
 	load_images()
 
-	#create a label and put an image on
+	# Create a label and put an image on
 	lbl = tk.Label(window,image=L)
 	lbl.grid(row=0,column=0)
+
+	#  Buttons for settings and start
+	gmebtn = tk.Button(window,text='Begin',width=30,height=5)
+	gmebtn.grid(row=1,column=0)
 	
 
 
@@ -91,10 +98,12 @@ def gme_win():
 	# Objection Columns
 	buttonname = tk.Button(image= E)
 	buttonname.grid(row=1,column=1)
-	# Swap for column 2
+	# Swap for column 1
+
+
 	buttonname = tk.Button(image= E)
 	buttonname.grid(row=1,column=2)
-	# Swap for column 3
+	# Swap for column 2
 
 
 	# Edgeworth Columns
