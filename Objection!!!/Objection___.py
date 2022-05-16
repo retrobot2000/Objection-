@@ -7,7 +7,7 @@ from tkinter import PhotoImage
 # How this works is when you see the prosecutor pop up, click him and an objection will appear next to him
 # If you see an objection next to Phoenix, click on the objection and one will pop up on the prosecutors side
 # Game over if you touch any empty space, an objection on the prosecutors side, if you don't hit the keys on time, or Phoenix
-# Game win after 10 successful counters
+# Game win after 20 seconds pass
 
 ##########
 # Images #
@@ -60,7 +60,7 @@ def wel_win():
 	lbl = tk.Label(window,image=L)
 	lbl.grid(row=0,column=0,columnspan=3)
 
-	#  Buttons for settings and start
+	#  Buttons for start, settings, and exit
 	gmebtn = tk.Button(window,text='Begin',width=30,height=5,command= lambda b="gme_click" :gme_click(b))
 	gmebtn.grid(row=1,column=0)
 
