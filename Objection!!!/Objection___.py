@@ -13,8 +13,6 @@ from tkinter import PhotoImage
 # Images #
 ##########
 
-
-
 def load_images():
 	""" Loads all images because it can """
 	global PW
@@ -27,6 +25,20 @@ def load_images():
 	OBJ = PhotoImage(file="objection.png")
 	E = PhotoImage(file="Empty.png")
 	L = PhotoImage(file="Logo.png")
+
+###########
+# Buttons #
+###########
+
+def gme_click(argument):
+	argument
+	gme_win()
+def set_click(argument):
+	argument
+	set_win()
+def ext_click(argument):
+	argument
+	window.destroy()
 
 ###########
 # Windows #
@@ -46,13 +58,17 @@ def wel_win():
 
 	# Create a label and put an image on
 	lbl = tk.Label(window,image=L)
-	lbl.grid(row=0,column=0)
+	lbl.grid(row=0,column=0,columnspan=3)
 
 	#  Buttons for settings and start
-	gmebtn = tk.Button(window,text='Begin',width=30,height=5)
+	gmebtn = tk.Button(window,text='Begin',width=30,height=5,command= lambda b="gme_click" :gme_click(b))
 	gmebtn.grid(row=1,column=0)
-	
 
+	stgbtn = tk.Button(window,text='Settings',width=30,height=5,command= lambda b="set_click" :set_click(b))
+	stgbtn.grid(row=1,column=1)	
+
+	extbtn = tk.Button(window,text='Exit',width=30,height=5,command= lambda b="ext_click" :ext_click(b))
+	extbtn.grid(row=1,column=2)
 
 
 def set_win():
@@ -71,7 +87,7 @@ def set_win():
 def gme_win():
 	""" Create Game window """
 	global window
-
+	window.destroy()
 	window = tk.Tk()
 	# Set title
 	window.title("Ace Attorney: OBJECTION!!!")
